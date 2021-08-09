@@ -11,26 +11,23 @@
     <ul class="navbar-nav">
       {% if request.user.is_staff %}
       <li class="nav-item active">
-        <a class="nav-link" href="{% url 'home' %}">Dashboard</a>
+        <a class="nav-link" href="{% url 'home' %}">DASHBOARD</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'products' %}">Products</a>
+        <a class="nav-link" href="{% url 'formview' %}">FORMS</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'orders' %}">Orders</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'customers' %}">Customers</a>
+        <a class="nav-link" href="{% url 'callendar' %}">CALLENDAR</a>
       </li>
       {% else %}
        <li class="nav-item">
-        <a class="nav-link" href="{% url 'account' %}">Settings</a>
+        <a class="nav-link" href="">Settings</a>
       </li>
       {% endif %}
     </ul>
   </div>
 
-  <span class="hello-msg">{{request.user}}</span>
+  <span class="hello-msg">Welcome, {{request.user}}</span>
   <span ><a  class="hello-msg" href="{% url 'logout' %}">Logout</a></span>
 
 </nav>
